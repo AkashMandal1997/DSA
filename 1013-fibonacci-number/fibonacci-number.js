@@ -9,6 +9,18 @@ var fib = function(n) {
 
     if(n<2) return n;
 
-    return fib(n-1)+fib(n-2);
+    // return fib(n-1)+fib(n-2);
+
+    let prev=1, secPrev=0,curr;
+
+    while(n>=2){
+     
+    curr = prev + secPrev
+    secPrev = prev
+    prev = curr
     
+    n--;
+        
+    }
+    return prev;
 };
